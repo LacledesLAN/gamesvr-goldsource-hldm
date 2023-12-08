@@ -34,6 +34,8 @@ COPY --chown=GoldSource:root ./amxmodx/amxmodx_base /app/valve/addons/amxmodx
 
 COPY --chown=GoldSource:root ./amxmodx/amxmodx_ll-config /app/valve/addons/amxmodx
 
+RUN echo "precache.amxx" >> /app/valve/addons/amxmodx/configs/plugins.ini
+
 COPY --chown=GoldSource:root ./dist /app
 
 COPY --chown=GoldSource:root ./dist/linux /app
