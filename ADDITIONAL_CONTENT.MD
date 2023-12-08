@@ -9,7 +9,7 @@
 | `hl_pool_day`       | ![](.documentation-assets/maps/hl_pool_day_00.jpg) | ![](.documentation-assets/maps/hl_pool_day_01.jpg.jpg) | |
 | `HLDM_DECK16`       | ![](.documentation-assets/maps/hldm_deck16_00.jpg) | ![](.documentation-assets/maps/hldm_deck16_01.jpg) | ![](.documentation-assets/maps/hldm_deck16_02.jpg) |
 | `lockout`           | ![](.documentation-assets/maps/lockout_00.jpg)     | ![](.documentation-assets/maps/lockout_01.jpg)     | ![](.documentation-assets/maps/lockout_02.jpg)     |
-| `oilrig`            | ![](.documentation-assets/maps/oilrig_00.jpg)      | ![](.documentation-assets/maps/oilrig_00.jpg)      | ![](.documentation-assets/maps/oilrig_00.jpg)      |
+| `oilrig`            | ![](.documentation-assets/maps/oilrig_00.jpg)      | ![](.documentation-assets/maps/oilrig_01.jpg)      | ![](.documentation-assets/maps/oilrig_02.jpg)      |
 | `Star_Trek_Rats_v2` | ![](.documentation-assets/maps/trek_rats_00.jpg)   | ![](.documentation-assets/maps/trek_rats_01.jpg)   | ![](.documentation-assets/maps/trek_rats_02.jpg)   |
 
 ## Player Models
