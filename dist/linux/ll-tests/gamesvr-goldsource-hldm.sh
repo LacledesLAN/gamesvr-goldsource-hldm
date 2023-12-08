@@ -147,7 +147,7 @@ fi;
 ### TESTS ###########################################################################################
 # Stock hldm server tests
 should_lack 'Running the dedicated server as root' 'Server is not running under root';
-should_have 'Setting breakpad minidump AppID = 90' 'Steam App ID 70 is running';
+should_have 'Setting breakpad minidump AppID = 70' 'Steam App ID 70 is running';
 should_have 'Stdio (valve)' 'hldm mod loaded';
 should_lack 'map change failed:' 'Map was able to load';
 should_have 'Metamod comes with ABSOLUTELY NO WARRANTY' 'metamod loaded successfully';
