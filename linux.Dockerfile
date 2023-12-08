@@ -30,7 +30,7 @@ RUN usermod -l HLDM GoldSource &&`
     mkdir -p /app/valve/logs &&`
     chmod 775 /app/valve/logs;
 
-RUN echo 90 > /app/steam_appid.txt;
+RUN echo 70 > /app/steam_appid.txt;
 
 USER HLDM
 
