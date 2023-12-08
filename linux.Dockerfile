@@ -1,4 +1,18 @@
 # escape=`
+
+FROM lacledeslan/steamcmd as DOWNLOADER
+
+ARG contentServer=content.lacledeslan.net
+
+RUN echo 'Downloading LL custom content' &&`
+        mkdir --parents /tmp/out/ &&`
+        wget -rkp -nH --no-verbose --cut-dirs=2 -R "index.*,*.md" -e robots=off "http://"$contentServer"/fastDownloads/goldsrc-hldm/" -P "/tmp/out/" &&`
+    echo 'deleting any web assets that were downloaded' &&`
+        [ -f /tmp/out/lacledeslan.ico ] && rm /tmp/out/lacledeslan.ico &&`
+        [ -d /tmp/out/logos ] && rm -rf /tmp/out/logos &&`
+    echo 'decompressing any .bz2 files' &&`
+        find /tmp/out/ -name "*.bz2" -exec sh -c 'bzip2 -d "$1"' _ {} \;
+
 FROM lacledeslan/gamesvr-goldsource
 
 HEALTHCHECK NONE
@@ -23,6 +37,8 @@ COPY --chown=GoldSource:root ./amxmodx/amxmodx_ll-config /app/valve/addons/amxmo
 COPY --chown=GoldSource:root ./dist /app
 
 COPY --chown=GoldSource:root ./dist/linux /app
+
+COPY --chown=GoldSource:root --from=DOWNLOADER /tmp/out/ /app/valve/
 
 # UPDATE USERNAME & ensure permissions
 RUN usermod -l HLDM GoldSource &&`

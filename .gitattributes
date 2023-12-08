@@ -1,2 +1,8 @@
 # Set default behavior to automatically normalize to linux line endings.
 * text=auto eol=lf
+
+*.bmp binary
+*.jpg binary
+*.mdl binary
+*.smd binary
+*.wav binary
