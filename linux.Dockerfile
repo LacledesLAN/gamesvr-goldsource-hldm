@@ -30,6 +30,9 @@ RUN usermod -l HLDM GoldSource &&`
     mkdir -p /app/valve/logs &&`
     chmod 775 /app/valve/logs;
 
+# We use appid '90' to download the dedicated server, but the half-life dm client is appid '70'.
+# So we need to create a file with the correct appid, so that it matches the client, otherwise
+# we get a "Steam validation rejected" error when trying to connect to the server.
 RUN echo 70 > /app/steam_appid.txt;
 
 USER HLDM
