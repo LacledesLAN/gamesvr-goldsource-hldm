@@ -34,7 +34,10 @@ COPY --chown=GoldSource:root ./amxmodx/amxmodx_base /app/valve/addons/amxmodx
 
 COPY --chown=GoldSource:root ./amxmodx/amxmodx_ll-config /app/valve/addons/amxmodx
 
-RUN echo "precache.amxx" >> /app/valve/addons/amxmodx/configs/plugins.ini
+RUN echo "precache.amxx" >> /app/valve/addons/amxmodx/configs/plugins.ini &&`
+    touch /app/valve/addons/amxmodx/configs/precache/default.pre &&`
+    echo "precache_file models/player/terror/aquaman.mdl" >> /app/valve/addons/amxmodx/configs/precache/default.pre &&`
+    echo "precache_file models/player/terror/Bender.mdl" >> /app/valve/addons/amxmodx/configs/precache/default.pre
 
 COPY --chown=GoldSource:root ./dist /app
 
