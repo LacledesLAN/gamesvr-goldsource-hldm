@@ -1,2 +1,3 @@
-precache_file models/player/aquaman/aquaman.mdl
-precache_file models/player/bender/Bender.mdl
+precache_model models/player/aquaman/aquaman.mdl
+precache_model models/player/bender/Bender.mdl
+precache_model models/player/bert/bert.mdl
