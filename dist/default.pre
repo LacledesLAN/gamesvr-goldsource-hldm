@@ -1,3 +1,8 @@
-precache_model models/player/aquaman/aquaman.mdl
+precache_generic models/player/bender/bender.bmp
 precache_model models/player/bender/Bender.mdl
-precache_model models/player/bert/bert.mdl
+precache_generic models/player/homer1/homer1.bmp
+precache_model models/player/homer1/homer1.mdl
+precache_generic models/player/jack/Jack.bmp
+precache_model models/player/jack/Jack.mdl
+precache_generic models/player/partybear/partybear.bmp
+precache_model models/player/partybear/partybear.mdl
