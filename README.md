@@ -8,12 +8,6 @@ This repository is maintained by [Laclede's LAN](https://lacledeslan.com). Its c
 
 [![linux/amd64](https://github.com/LacledesLAN/gamesvr-goldsource-hldm/actions/workflows/build-linux-image.yml/badge.svg?branch=master)](https://github.com/LacledesLAN/gamesvr-goldsource-hldm/actions/workflows/build-linux-image.yml)
 
-### Download
-
-```shell
-docker pull lacledeslan/gamesvr-goldsource-hldm;
-```
-
 ### Run Self Tests
 
 The image includes a test script that can be used to verify its contents. No changes or pull-requests will be accepted to this repository if any tests fail.

@@ -1,6 +1,6 @@
 # escape=`
 
-FROM lacledeslan/steamcmd as DOWNLOADER
+FROM lacledeslan/steamcmd AS downloader
 
 ARG contentServer=content.lacledeslan.net
 
@@ -42,7 +42,7 @@ COPY --chown=GoldSource:root ./dist /app
 
 COPY --chown=GoldSource:root ./dist/linux /app
 
-COPY --chown=GoldSource:root --from=DOWNLOADER /tmp/out/ /app/valve/
+COPY --chown=GoldSource:root --from=downloader /tmp/out/ /app/valve/
 
 # UPDATE USERNAME & ensure permissions
 RUN usermod -l HLDM GoldSource &&`
