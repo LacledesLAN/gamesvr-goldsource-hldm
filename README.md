@@ -1,6 +1,6 @@
 # Laclede's LAN Half-Life Deathmatch Freeplay Server in Docker
 
-![Laclede's LAN Half-Life Deathmatch Freeplay Server](https://raw.githubusercontent.com/LacledesLAN/gamesvr-goldsource-hldm/master/.misc/banner-goldsource-hldm.png?token=ADBWG5ULV4OOLHLQQF5E4MLB2YWTQ "Laclede's LAN Half-Life Deathmatch Freeplay Server")
+![Laclede's LAN Half-Life Deathmatch Freeplay Server](https://raw.githubusercontent.com/LacledesLAN/gamesvr-goldsource-hldm/refs/heads/master/.documentation/banner-goldsource-hldm.png "Laclede's LAN Half-Life Deathmatch Freeplay Server")
 
 This repository is maintained by [Laclede's LAN](https://lacledeslan.com). Its contents are heavily tailored and tweaked for use at our charity LAN-Parties. For third-parties we recommend using this repo only as a reference example and then building your own using [gamesvr-goldsource](https://github.com/LacledesLAN/gamesvr-goldsource) as the base image for your customized server.
 
