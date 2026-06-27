@@ -2,6 +2,7 @@
     "cSpell.words": [
         "amxmodx",
         "breakpad",
+        "BUILDNODE",
         "Deathmatch",
         "DOCKERHUB",
         "Dockerized",
@@ -16,6 +17,7 @@
         "minidump",
         "oilrig",
         "partybear",
-        "precache"
+        "precache",
+        "usermod"
     ]
 }
