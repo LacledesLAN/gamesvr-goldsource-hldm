@@ -11,20 +11,24 @@ RUN echo 'Downloading LL custom content' && \
     echo 'decompressing any .bz2 files' && \
         find /tmp/out/ -name "*.bz2" -exec sh -c 'bzip2 -d "$1"' _ {} \;
 
+
+#---------------------------------
 FROM lacledeslan/gamesvr-goldsource
 
-ARG BUILD_NODE=unspecified
-ARG GIT_REVISION=unspecified
+ARG BUILD_DATE=unspecified \
+    BUILD_NODE=unspecified \
+    GIT_REVISION=unspecified
 
 HEALTHCHECK NONE
 
 LABEL architecture="amd64" \
-    com.lacledeslan.build-node="$BUILD_NODE" \
-    maintainer="Laclede's LAN <contact@lacledeslan.com>" \
-    org.opencontainers.image.description="LL Half-Life Deathmatch Dedicated Freeplay Server" \
-    org.opencontainers.image.revision="$GIT_REVISION" \
-    org.opencontainers.image.source="https://github.com/LacledesLAN/gamesvr-goldsource-hldm" \
-    org.opencontainers.image.vendor="Laclede's LAN"
+      com.lacledeslan.build-node="$BUILD_NODE" \
+      maintainer="Laclede's LAN <contact@lacledeslan.com>" \
+      org.opencontainers.image.created="$BUILD_DATE" \
+      org.opencontainers.image.description="LL Half-Life Deathmatch Dedicated Freeplay Server" \
+      org.opencontainers.image.revision="$GIT_REVISION" \
+      org.opencontainers.image.source="https://github.com/LacledesLAN/gamesvr-goldsource-hldm" \
+      org.opencontainers.image.vendor="Laclede's LAN"
 
 COPY --chown=GoldSource:root ./amxmodx/metamod/metamod.so /app/valve/addons/metamod/dlls/metamod.so
 
@@ -58,5 +62,3 @@ USER HLDM
 WORKDIR /app
 
 CMD ["/bin/bash"]
-
-ONBUILD USER root
