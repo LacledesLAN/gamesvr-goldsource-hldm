@@ -13,18 +13,18 @@ RUN echo 'Downloading LL custom content' && \
 
 FROM lacledeslan/gamesvr-goldsource
 
+ARG BUILD_NODE=unspecified
+ARG GIT_REVISION=unspecified
+
 HEALTHCHECK NONE
 
-ARG BUILDNODE=unspecified
-ARG SOURCE_COMMIT=unspecified
-
-LABEL com.lacledeslan.build-node=$BUILDNODE \
-      org.label-schema.schema-version="1.0" \
-      org.label-schema.url="https://github.com/LacledesLAN/README.1ST" \
-      org.label-schema.vcs-ref=$SOURCE_COMMIT \
-      org.label-schema.vendor="Laclede's LAN" \
-      org.label-schema.description="LL Half-Life Deathmatch Dedicated Freeplay Server" \
-      org.label-schema.vcs-url="https://github.com/LacledesLAN/gamesvr-goldsource-hldm"
+LABEL architecture="amd64" \
+    com.lacledeslan.build-node="$BUILD_NODE" \
+    maintainer="Laclede's LAN <contact@lacledeslan.com>" \
+    org.opencontainers.image.description="LL Half-Life Deathmatch Dedicated Freeplay Server" \
+    org.opencontainers.image.revision="$GIT_REVISION" \
+    org.opencontainers.image.source="https://github.com/LacledesLAN/gamesvr-goldsource-hldm" \
+    org.opencontainers.image.vendor="Laclede's LAN"
 
 COPY --chown=GoldSource:root ./amxmodx/metamod/metamod.so /app/valve/addons/metamod/dlls/metamod.so
 
