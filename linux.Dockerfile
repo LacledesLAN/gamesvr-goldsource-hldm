@@ -1,10 +1,10 @@
 FROM lacledeslan/steamcmd AS downloader
 
-ARG contentServer=content.lacledeslan.net
+ARG CONTENT_SERVER=content.lacledeslan.net
 
 RUN echo 'Downloading LL custom content' && \
         mkdir --parents /tmp/out/ && \
-        wget -rkp -nH --no-verbose --cut-dirs=2 -R "index.*,*.md" -e robots=off "http://"$contentServer"/fastDownloads/goldsrc-hldm/" -P "/tmp/out/" && \
+        wget -rkp -nH --no-verbose --cut-dirs=2 -R "index.*,*.md" -e robots=off "http://"$CONTENT_SERVER"/fastDownloads/goldsrc-hldm/" -P "/tmp/out/" && \
     echo 'deleting any web assets that were downloaded' && \
         [ -f /tmp/out/lacledeslan.ico ] && rm /tmp/out/lacledeslan.ico && \
         [ -d /tmp/out/logos ] && rm -rf /tmp/out/logos && \
